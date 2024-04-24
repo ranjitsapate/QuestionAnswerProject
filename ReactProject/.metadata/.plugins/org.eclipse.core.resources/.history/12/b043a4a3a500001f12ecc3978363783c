@@ -1,0 +1,20 @@
+package com.demo.repository;
+
+import java.net.ContentHandler;
+import java.util.List;
+
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.demo.model.Question;
+
+public interface QuestionRepository extends JpaRepository<Question, Long>{
+
+	
+
+	List<String> findDistinctSubject();
+
+	ContentHandler findBySubject(String subject, PageRequest peageable);
+
+
+}

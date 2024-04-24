@@ -1,0 +1,63 @@
+package com.demo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.model.Question;
+import com.demo.repository.QuestionRepository;
+
+import lombok.RequiredArgsConstructor;
+
+
+@RequiredArgsConstructor
+@Service
+public class QuestionService implements IQuestionService{
+
+	private final QuestionRepository questionRepository;
+	
+	
+	@Override
+	public Question createQuestion(Question question) {
+		
+		return questionRepository.save(question);
+	}
+
+	@Override
+	public List<Question> getAllQuestions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Question> getQuestionById(Long id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
+	@Override
+	public List<String> getAllSubjects() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Question updateQuestion(Long id, Question question) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteQuestion(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Question> getQuestionForUser(Integer numOfQuestion, String subject) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

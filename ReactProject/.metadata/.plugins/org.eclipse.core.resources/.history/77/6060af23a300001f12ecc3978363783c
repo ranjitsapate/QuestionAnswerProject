@@ -1,0 +1,15 @@
+package com.demo.repository;
+
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.demo.model.Question;
+
+public interface QuestionRepository extends JpaRepository<Question, Long>{
+
+	static Object findBySubject(String subject, PageRequest peageable) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

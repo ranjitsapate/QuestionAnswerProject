@@ -18,6 +18,7 @@ import { useLocation} from "react-router-dom"
 				<h5 className="text-info">
 					You answered {totalScores} out of {numQuestions} questions correctly.
 				</h5>
+				
 				<p>Your total score is {percentage}%.</p>
 
 				<button className="btn btn-primary btn-sm" onClick={handleRetakeQuiz}>
